@@ -45,8 +45,13 @@ const whatSeasonNow = function (number) {
     case 11:
       return "Осень";
       break;
-    default:
+    case 12:
+    case 1:
+    case 2:
       return "Зима";
+      break;
+    default:
+      return "Такого месяца нету";
   }
 };
 
@@ -68,4 +73,4 @@ console.log(lightCalculator(100, 10, "/"));
 
 // >>> What Season is it Now Function
 // const number = +prompt("Введите какой месяц по счету: ");
-console.log(whatSeasonNow(11));
+console.log(whatSeasonNow(0));
