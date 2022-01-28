@@ -1,39 +1,71 @@
-// является ли число четным
-const evenNumber = function (num) {
-  if (num % 2 === 0) {
-    return "Число " + num + " четное";
+// trafficLights Function (green  yellow  Red)
+
+const trafficLights = function (color) {
+  if (color === "red") {
+    return "Стой";
+  } else if (color == "yellow") {
+    return "Жди";
+  } else if (color === "green") {
+    return "Иди";
   } else {
-    return "Число " + num + " НЕ четное";
-  }
-};
-// наименьшее из двух чисел
-const lesserNumber = function (num1, num2) {
-  if (num1 < num2) {
-    return " Число " + num1 + " меньше";
-  } else {
-    return " Число " + num2 + " меньше";
+    return "Не понял";
   }
 };
 
-// принимает количестов денег у пользователя и стоимость товара.
-const enoughMoney = function (money, price) {
-  if (money > price) {
-    return " У Вас хватает денег на этот товар!";
-  } else {
-    return 'Ты лузер!))';
+// light Calculator Function
+
+const lightCalculator = function (num1, num2, operator) {
+  switch (operator) {
+    case "+":
+      return num1 + num2;
+    case "-":
+      return num1 - num2;
+    case "/":
+      return num1 / num2;
+    case "*":
+      return num1 * num2;
   }
 };
 
-const num = +prompt("Введите число:");
-const resul_1 = evenNumber(num);
-alert(resul_1);
+// What Season is it Now Function
+const whatSeasonNow = function (number) {
+  switch (number) {
+    case 3:
+    case 4:
+    case 5:
+      return "Весна";
+      break;
+    case 6:
+    case 7:
+    case 8:
+      return "Лето";
+      break;
+    case 9:
+    case 10:
+    case 11:
+      return "Осень";
+      break;
+    default:
+      return "Зима";
+  }
+};
 
-const num1 = +prompt("Введите первое число для сравнения:");
-const num2 = +prompt("Введите второе число для сравнения:");
-const resul_2 = lesserNumber(num1, num2);
-alert(resul_2);
+// ====================
+// >>> trafficLights (green  yellow  Red)
 
-const yourMoney = +prompt("Введите сколько у Вас денег:");
-const priceProduct = +prompt("Сколько стоит товар:");
-const resul_3 = enoughMoney(yourMoney, priceProduct);
-alert(resul_3);
+// const color = prompt("Введите цвет сфетофора (green yellow  red):");
+console.log(trafficLights('red'));
+
+// >>> light Calculator
+console.log('Сложение')
+console.log(lightCalculator(10, 2, "+"));
+console.log('Вычитание')
+console.log(lightCalculator(88, 44, "-"));
+console.log('Умножение')
+console.log(lightCalculator(3, 4, "*"));
+console.log('Деление')
+console.log(lightCalculator(100, 10, "/"));
+
+// >>> What Season is it Now Function
+// const number = +prompt("Введите какой месяц по счету: ");
+console.log(whatSeasonNow(11));
