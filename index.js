@@ -1,7 +1,7 @@
 // Function (1)
 
 function numberOutput() {
-  for (let couter = 25; couter > 0; couter--) {
+  for (let couter = 25; couter >= 0; couter--) {
     console.log(couter);
   }
 }
