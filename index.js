@@ -1,76 +1,45 @@
-// trafficLights Function (green  yellow  Red)
+// Function (1)
 
-const trafficLights = function (color) {
-  if (color === "red") {
-    return "Стой";
-  } else if (color == "yellow") {
-    return "Жди";
-  } else if (color === "green") {
-    return "Иди";
-  } else {
-    return "Не понял";
+function numberOutput() {
+  for (let couter = 25; couter > 0; couter--) {
+    console.log(couter);
   }
-};
+}
 
-// light Calculator Function
 
-const lightCalculator = function (num1, num2, operator) {
-  switch (operator) {
-    case "+":
-      return num1 + num2;
-    case "-":
-      return num1 - num2;
-    case "/":
-      return num1 / num2;
-    case "*":
-      return num1 * num2;
+// Function (2)
+
+function multiplesFive() {
+  for (let couter = 10; couter <= 50; couter++) {
+    if (couter % 5 === 0) {
+      console.log(couter);
+    } else {
+      continue;
+    }
   }
-};
+}
 
-// What Season is it Now Function
-const whatSeasonNow = function (number) {
-  switch (number) {
-    case 3:
-    case 4:
-    case 5:
-      return "Весна";
-      break;
-    case 6:
-    case 7:
-    case 8:
-      return "Лето";
-      break;
-    case 9:
-    case 10:
-    case 11:
-      return "Осень";
-      break;
-    case 12:
-    case 1:
-    case 2:
-      return "Зима";
-      break;
-    default:
-      return "Такого месяца нету";
-  }
-};
 
-// ====================
-// >>> trafficLights (green  yellow  Red)
+// Function (3)
 
-// const color = prompt("Введите цвет сфетофора (green yellow  red):");
-console.log(trafficLights('red'));
+function sumOfNumbers(){
+  let sum = 0;
+    for (let i = 1; i <= 100; i++) {
+      sum += i;
+      console.log(i);
+    }
+    console.log(sum);
+}
 
-// >>> light Calculator
-console.log('Сложение')
-console.log(lightCalculator(10, 2, "+"));
-console.log('Вычитание')
-console.log(lightCalculator(88, 44, "-"));
-console.log('Умножение')
-console.log(lightCalculator(3, 4, "*"));
-console.log('Деление')
-console.log(lightCalculator(100, 10, "/"));
 
-// >>> What Season is it Now Function
-// const number = +prompt("Введите какой месяц по счету: ");
-console.log(whatSeasonNow(0));
+// Function (4)
+
+function solveExample() {
+  let resolve = 2 + 2 * 2;
+  do {
+    answer = +prompt("Реши пример (2 + 2 * 2 = ___ )");
+    console.log(answer);
+  } while (answer != resolve);
+  console.log(answer);
+  console.log(answer + " = ПРАВИЛЬНО");
+}
